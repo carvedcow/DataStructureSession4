@@ -8,22 +8,22 @@ public class Task6 {
 
 		// sort array
 		Arrays.sort(arr);
-
+		// Values
+		int firstIndex = 0;
+		int lastIndex = arr.length-1;
 		boolean result = false;
-		int middleIndex = arr.length/2;
-
-		while (true) {
+		
+		// Methods
+		while (firstIndex <= lastIndex && !result) {
+			int middleIndex = (firstIndex + lastIndex)/2;
 			if (value == arr[middleIndex])
 				result = true;
-			else
-				while (value != arr[middleIndex]) {
-					if (value < arr[middleIndex]) {
-						
-					}
-					else
-						break;
-				}
-			break;
+			else {
+				if (value < arr[middleIndex])
+					lastIndex = middleIndex-1;
+				else
+					firstIndex = middleIndex+1;
+			}
 		}
 
 		return result;

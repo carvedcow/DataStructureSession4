@@ -109,6 +109,11 @@ public class Main {
 		System.out.println("Task 6 ------------------------------------------");
 		int[] task6Array = new int[] {5, 4, 67, 7, 1, 4};
 		Task6 task6 = new Task6();
+		boolean found = task6.IntArrayBinarySearch(task6Array, 67);
+		if (found)
+			System.out.println("Found");
+		else
+			System.out.println("Not Found");
 		System.out.println("------------------------------------------");
 		System.out.println();
 	}
